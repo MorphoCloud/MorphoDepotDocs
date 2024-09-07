@@ -1,3 +1,7 @@
+---
+marp: true
+---
+
 <!--
 theme: gaia
 class:
@@ -12,118 +16,110 @@ _class:
  - invert
 -->
 
-# Deploy Marp to GitHub Pages
 
-Presentations to Webpages: Instantly!
+# MorphoDepot
 
-## What?
+GitHub for Segmentation Projects
 
-[Marp](https://marp.app/) lets you create HTML slides from markdown (like this!).
+## Big Picture Goals
 
-This presentation is both a [website](https://alexsci.com/marp-to-pages) and a [README.md](https://github.com/ralexander-phi/marp-to-pages/blob/main/README.md).
+* Faciliate open science analysis of biological specimens
+* Tools and methods for scalable collaboration
+* Simplify contributions for anyone (not just lab members)
+* Make system as friendly as possible for new users
+* Track user contributions (e.g. for co-authorship)
+* Ideally usable for many purposes, but SlicerMorph users are first priority
 
-## Why?
+## Advantages of GitHub
 
-Treat your presentation the same way you treat code.
+* Free/inexpensive, widely used, mature
+* Traceable, open science
+* Already used in MorphoCloud
 
-- Use git to track changes
-- Pull requests to collaborate
-- Deploy automatically
-- See a problem? Open an issue!
+## Use case summary
 
-## Setup
+* Specimen scans that need annotation (e.g. segmentation or landmarks)
+* A team of contributors
+* A project leader to organize and approve contributions
 
-Want to create your own?
+For example:
+* microCT scan of a frog species
+* PI interested in anatomical segmentation
+* several students in a class assigned to segment different parts (limbs, body, head...)
 
-First, create a new repo [from the template repo](https://github.com/ralexander-phi/marp-to-pages).
 
-![](img/use-template.png)
+## How this maps to GitHub
 
-## Configure GitHub Pages
+* PI and students all create accounts on github.com (free tier is okay, just need email address)
+* Segmentation project is stored in a reposotory
+* Scan can be stored at any URL (e.g. s3 or JS2 bucket, or as github asset) in standard formats (nrrd, zarr...)
+* Repository follows MorphoDepot template (source URL, anatomy terminology, resulting segmentation)
+* Students are assigned issues for segmentation tasks
+* Students create pull requests for their assigned issues
+* PI reviews and merges pull requests
 
-Open your new repo and [setup publishing](https://help.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#choosing-a-publishing-source).
+## Other nice features of GitHub for MorphoDepot
 
-You'll typically use `gh-pages` as the deploy branch.
+* We can use the GitHub API to automate and simplify many steps
+* GitHub handles user accounts, email integration, sys admin, and many other complex issues
+* All GitHub project management features available to organize work
+* GitHub repository "topics" can be used to organize, e.g. by species or developmental stage
+* Readme files can include links, images, experiment descriptions, etc.
+* Researchers learn useful open science tools that can be applied to code, papers, data, etc
 
-## Review Build
+## Big Picture Issues
 
-Click on Actions tab and see if the build succeeded (it may take some time).
+* GitHub is designed for code, not 3D volumes
+  * so text-based tools may not be useful
+  * we may need to create custom data-specific replacements
+* GitHub is built for code developers, not biologists
+  * so tools can be difficult to use
+  * we may need to develop automation or custom documentation
+* GitHub is a commercial service and terms may change at any time
+  * it's been around since 2008, owned by Microsoft since 2018, so we can hope it's stable
+  * there are some alternatives if needed someday (GitLab, bitbucket...)
 
-![](img/click-actions.png)
+## 3D Slicer Integration Plans
 
-You should now see the generated files in the `gh-pages` branch.
+* A MorphoDepot module in SlicerMorph to simplify the workflow for contributors
+  * List issues assigned to the contributor (or issues avalable to claim)
+  * User can select an issue to work on
+    * Automatically creates branches and loads the data
+    * Allows user to save work in progress to pull request
+    * User can mark a contribution as ready for review
+* MorphoDepot can be used on a local machine or a Jetstream2 virtual desktop
+* TBD: tools to help PIs create MorphoDepot repositories
+  * depends on how hard it turns out to be to do it manually
+  * a tool could help ensure a very consistent structure for all repositories
 
-## View webpage
+## MorphoDepot Status
 
-Open your deployed webpage to see the content.
+* Initial prototype under development
+* Feedback from MorphoCloud user community wanted!
+  * pre-alpha versions could be ready for testing
+  * need segmentation projects with concrete use cases to work out details
 
-Out of the box you should see `README.md` as `/index.html` and `/README.pdf`. Slides under `docs/` are also converted.
+## Discussion Points: Authentication model
 
-## Running locally
+* Ensure integrity of repository
+  * Accurately track individual contributions
+  * Don't allow users to delete or overwrite other contributions
+* Respect user accounts
+  * Don't give TA or fellow students access to others' accounts
+  * Don't expose high-value credentials on shared machines
+  * Ecourage users to rely on GitHub for their other projects
+* Streamline login for new users
+  * Simplify/automate but don't obscure underlying security model
+  * Use existing GitHub tools when possible
 
-Locally you'll run commands like:
+## Discussion Points: Repository architecture
 
-```
-$ marp README.md -o build/README.pdf
-```
+* Single specimen / scan or multiples
+* Structured metadata about specimen
+  * Use of GitHub topics to find repositories
+  * JSON Schema for describing segmentation tasks
+* Best storage for original scans (GitHub assets, JS2 buckets, etc.)
+* Fork vs branch model / are contributors part of the repo
 
-or
-
-```
-$ npx @marp-team/marp-cli@latest README.md -o build/README.pdf
-```
-
-## As a workflow step
-
-The workflow runs an equivalent step:
-
-```
-- name: Marp Build (README.pdf)
-  uses: docker://marpteam/marp-cli:v1.7.0
-  with:
-    args: README.md -o build/README.pdf
-  env:
-    MARP_USER: root:root
-```
-
-Note the `args` match the previous slide.
-
-## Customizing the build
-
-Anything in the `build/` folder will be deployed to GitHub Pages.
-
-You can copy extra files or run further processing steps using other tools.
-
-## Learn more about Marp
-
-This is a good time to learn more about Marp. Here's some resources:
-
-- [CommonMark](https://commonmark.org/)
-- [Cheat Sheet](https://commonmark.org/help/)
-- [Themes](https://github.com/marp-team/marp-core/tree/master/themes)
-- [CSS Themes](https://marpit.marp.app/theme-css)
-- [Directives](https://marpit.marp.app/directives)
-- [VS Code plugin](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode)
-
-## Example Sites
-
-Known sites using this action are:
-
-- [University of Illinois at Urbana-Champaign's CS 199 Even More Practice](https://cs199emp.netlify.app/) [(code)](https://github.com/harsh183/emp-125)
-- [Exploring agent based models](https://roiarthurb.github.io/Talk-UMMISCO_06-07-2020/) [(code)](https://github.com/RoiArthurB/Talk-UMMISCO_06-07-2020)
-
-Send a [pull request](https://github.com/ralexander-phi/marp-to-pages) to get your site added.
-
-## Publish your slides
-
-When you are ready to share your presentation, commit or merge to `main` and your content on GitHub Pages will automatically update.
-
-# 🎉
-<!--
-_class:
- - lead
- - invert
--->
-### Hooray!
 
 
