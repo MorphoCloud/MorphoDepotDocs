@@ -20,6 +20,7 @@ _class:
 # MorphoDepot
 
 GitHub for Segmentation Projects
+(currently in alpha development)
 
 ## Big Picture Goals
 
@@ -63,8 +64,8 @@ GitHub for Segmentation Projects
 - We can use the GitHub API to automate and simplify many steps
 - GitHub handles user accounts, email integration, sys admin, and many other complex issues
 - All GitHub project management features available to organize work
-- GitHub repository "topics" can be used to organize, e.g. by species or developmental stage
-- Readme files can include links, images, experiment descriptions, etc.
+- GitHub repository "topics" can be used to organize, e.g. by species, scan type, or developmental stage
+- Extra files can include links, images, experiment descriptions...
 - Researchers learn useful open science tools
 
 ## Big Picture Issues
@@ -95,6 +96,7 @@ GitHub for Segmentation Projects
   - a tool could help ensure a very consistent structure for all repositories
 - TBD: a tool to simply comparing and merging segmentations
 - TBD: integration with machine learning pipelines (train autosegmentation)
+- TBD: deal with large scans (too big for memory)
 
 ## Discussion Points: Authentication model
 
@@ -121,7 +123,7 @@ GitHub for Segmentation Projects
 
 - Initial prototype under development
 - Feedback from MorphoCloud user community wanted!
-  - pre-alpha versions could be ready for testing
+  - pre-alpha versions could be ready for testing soon
   - need segmentation projects with concrete use cases to work out details
 
 
