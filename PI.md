@@ -13,7 +13,7 @@ These instructions are intended for a PI such as a professor or biology research
   * Enable issues for the repository
   * Add the `MorphoDepot` topic ag to the repository (in the repo settings in the About box) so it appears in this list: https://github.com/topics/morphodepot
   * (Optionally disable other features like wiki and projects to make the repositories simpler)
-  * Invite all your segmenters to your 
+  * Invite all your segmenters to your repository so you can assign issues to them
 * Define volume to be segmented (e.g. microCT of frog)
   * Create a file named `master_volume` containing the URL of your volume to be segmented
   * Add a [Slicer color table](https://slicer.readthedocs.io/en/latest/developer_guide/modules/colors.html) in `.ctbl` format with the list of segments and colors
