@@ -20,7 +20,14 @@ _class:
 # MorphoDepot
 
 GitHub for Segmentation Projects
-(currently in alpha development)
+(In alpha development as of October 2024)
+
+https://pieper.github.io/MorphoDepotDocs/
+
+## Quick Links
+
+* [Instructions for PIs](https://github.com/pieper/MorphoDepotDocs/blob/main/PI.md)
+* [Instructions for Segmenters](https://github.com/pieper/MorphoDepotDocs/blob/main/Segmenter.md)
 
 ## Big Picture Goals
 
