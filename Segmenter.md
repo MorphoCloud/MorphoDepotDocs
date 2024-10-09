@@ -9,11 +9,28 @@ These instructions are intended for a people will work to segment a microCT or s
 
 ## Install `gh`
 * The [gh](https://github.com/cli/cli) tool as [described here](https://github.com/cli/cli?tab=readme-ov-file#installation) and make sure it is in your shell's `PATH` and that you have logged in with your github account.
+* Use `gh --version` to confirm you have version 2.58.0 or higher.
+* Use `gh auth login` to activate your account login, something like this:
+```
+  $ gh auth login
+? Where do you use GitHub? GitHub.com
+? What is your preferred protocol for Git operations on this host? HTTPS
+? Authenticate Git with your GitHub credentials? Yes
+? How would you like to authenticate GitHub CLI? Login with a web browser
+
+! First copy your one-time code: XXXX-XXXX
+Press Enter to open github.com in your browser... 
+? Authentication complete.
+- gh config set -h github.com git_protocol https
+? Configured git protocol
+! Authentication credentials saved in plain text
+? Logged in as <username>
+```
 * Run `gh status` on the command line to confirm it is working
 
 ## Installation of MorphoDepot
 * During development the MorphoDepot code is available via a github repository (eventually it will be in SlicerMorph or its own extension)
-* Clone [this repository](https://github.com/pieper/SlicerMorphoDepot) to your computer (use the green `Code` button
+* Clone [this repository](https://github.com/pieper/SlicerMorphoDepot) to your computer (use the green `Code` button.  You can use this command in a terminal window to install it: `gh repo clone pieper/SlicerMorphoDepot`
 * Start 3D Slicer
 * Drag the cloned folder and drop it on 3D Slicer
 * Accept the dialog to load the module
