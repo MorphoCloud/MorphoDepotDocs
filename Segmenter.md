@@ -8,7 +8,7 @@ These instructions are intended for a people will work to segment a microCT or s
 * Some basic familiarity with git and github (as [described here](https://github.com/SlicerMorph/Tutorials/tree/main/git-and-github), although you cam mostly accomplish what you need via the web interface).
 
 ## Install `gh`
-* The `[gh](https://github.com/cli/cli)` tool as [described here](https://github.com/cli/cli?tab=readme-ov-file#installation) and make sure it is in your shell's `PATH` and that you have logged in with your github account.
+* The [gh](https://github.com/cli/cli) tool as [described here](https://github.com/cli/cli?tab=readme-ov-file#installation) and make sure it is in your shell's `PATH` and that you have logged in with your github account.
 * Run `gh status` on the command line to confirm it is working
 
 ## Installation of MorphoDepot
