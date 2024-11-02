@@ -5,10 +5,10 @@ These instructions are intended for a people will work to segment a microCT or s
 ## Prerequsites
 * A github account for this work.  *Note: you may want a dedicated account just for your segmentation projects if you are concerned about using your personal github credentials on a cloud machine*
 * Familiarity with 3D Slicer's segmentation tools (See, for example, the [SlicerMorph tutorials](https://github.com/SlicerMorph/Tutorials/blob/main/Segmentation/README.md) and the Slicer documentation at [Slicer.org](https://slicer.org)
-* Some basic familiarity with git and github (as [described here](https://github.com/SlicerMorph/Tutorials/tree/main/git-and-github), although you cam mostly accomplish what you need via the web interface).
+* Some basic familiarity with git and github (as [described here](https://github.com/SlicerMorph/Tutorials/tree/main/git-and-github), although you cam mostly accomplish what you need via the SlicerMorphoDepot interface).
 
 ## Install `gh`
-* The [gh](https://github.com/cli/cli) tool as [described here](https://github.com/cli/cli?tab=readme-ov-file#installation) and make sure it is in your shell's `PATH` and that you have logged in with your github account.
+* The [`gh`](https://github.com/cli/cli) tool as [described here](https://github.com/cli/cli?tab=readme-ov-file#installation) and make sure it is in your shell's `PATH` and that you have logged in with your github account.  If you are using a MorphoCloud insance `gh` will be preinstalled.
 * Use `gh --version` to confirm you have version 2.58.0 or higher.
 * Use `gh auth login` to activate your account login, something like this:
 ```
@@ -36,6 +36,10 @@ Press Enter to open github.com in your browser...
 * Accept the dialog to load the module
 * You can find the MorphoDepot module in the SlicerMorph category or by using the Find Module dialog (Control-F, or Command-F on Mac)
 
+## Accepting issues
+* The repository owner will email you with links to issues for you.  Follow those links to github and comment on the issue to indicate interest so the repository owner can assign the issue to you.
+* When the issue has been assigned you can access it via the MorphoDepot module.
+
 ## Using MorphoDepot
 * The module uses the `gh` command to interact with github on your behalf and work with data in Slicer
 * Use the `Refresh` button to get the list of segmentation tasks assigned to you.  These correspond to issues in your PI's repository
@@ -45,4 +49,4 @@ Press Enter to open github.com in your browser...
 * As you work on your segmentation, go back to the MorphoDepot module and use the `Commit and Push` button to save your work and push the results to github. Provide a short description as your `Commit message` and optionally a longer one to describe your work (or to make a note of remaining work that needs to be done). These notes are for yourself.
 * When doing work through MorphoDepot, do **NOT** use the regular save functions of Slicer, but use only the `Commit and Push` button to save your work. Regular save will potentially cause data loss. 
 * If you need to, you can exit slicer (e.g. to shelve the instance) and reload the issue later to pick up where you left off. If you did the `Commit and Push` prior to closing slicer, you can ignore the message about contents of the scene being unsaved.
-* When you have finished your work, click the `Request PR review` button to create a pull request.  You need to enter a short description of your work in the text area below the button for your instructor or PI to see. This action will create a trigger to the instructor/PI to review your work. They can merge (accept) it, or may ask you to revise. 
+* When you have finished your work, click the `Request PR review` button to change your pull request from draft sttaus to ready status.  You need to enter a short description of your work in the text area below the button for your instructor or PI to see. This action will create a trigger to the instructor/PI to review your work. They can merge (accept) it, or may ask you to revise. 
