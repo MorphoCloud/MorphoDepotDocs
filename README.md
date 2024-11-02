@@ -128,9 +128,9 @@ https://pieper.github.io/MorphoDepotDocs/
 
 ## MorphoDepot Status
 
-- Initial prototype under development
+- Initial prototype available for beta testing
 - Feedback from MorphoCloud user community wanted!
-  - pre-alpha versions could be ready for testing soon
+  - suggestions for improved documentation or features welcome
   - need segmentation projects with concrete use cases to work out details
 
 
