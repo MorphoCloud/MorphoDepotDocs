@@ -28,6 +28,9 @@ Press Enter to open github.com in your browser...
 ```
 * Run `gh status` on the command line to confirm it is working
 
+## Install 3D Slicer
+* If needed, get version 5.6.2 or later from [https://download.slicer.org](https://download.slicer.org)
+
 ## Installation of MorphoDepot
 * During development the MorphoDepot code is available via a github repository (eventually it will be in SlicerMorph or its own extension)
 * Clone [this repository](https://github.com/pieper/SlicerMorphoDepot) to your computer (use the green `Code` button.  You can use this command in a terminal window to install it: `gh repo clone pieper/SlicerMorphoDepot`
