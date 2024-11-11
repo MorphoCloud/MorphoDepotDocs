@@ -29,6 +29,8 @@ https://pieper.github.io/MorphoDepotDocs/
 * [Instructions for PIs](https://github.com/pieper/MorphoDepotDocs/blob/main/PI.md)
 * [Instructions for Segmenters](https://github.com/pieper/MorphoDepotDocs/blob/main/Segmenter.md)
 
+* Souce repo: [https://github.com/pieper/SlicerMorphoDepot](https://github.com/pieper/SlicerMorphoDepot)
+
 ## Big Picture Goals
 
 - Faciliate open science analysis of biological specimens
