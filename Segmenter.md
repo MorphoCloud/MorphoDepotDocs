@@ -9,6 +9,8 @@ These instructions are intended for a people will work to segment a microCT or s
 
 ## Install `gh`
 * The [`gh`](https://github.com/cli/cli) tool as [described here](https://github.com/cli/cli?tab=readme-ov-file#installation) and make sure it is in your shell's `PATH` and that you have logged in with your github account.  If you are using a MorphoCloud insance `gh` will be preinstalled.
+* If you use Windows, we suggest using the `winget` approach [described here](https://github.com/cli/cli?tab=readme-ov-file#windows).
+* If you use Mac, [homebrew](https://brew.sh/) is a good option.
 * Use `gh --version` to confirm you have version 2.58.0 or higher.
 * Use `gh auth login` to activate your account login, something like this:
 ```
