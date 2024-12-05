@@ -22,7 +22,7 @@ _class:
 GitHub for Segmentation Projects
 (In alpha development as of October 2024)
 
-https://pieper.github.io/MorphoDepotDocs/
+https://pieper.github.io/MorphoDepotDocs/ (for Slide presentation)
 
 ## Quick Links
 
@@ -94,7 +94,7 @@ https://pieper.github.io/MorphoDepotDocs/
 - A MorphoDepot module in SlicerMorph to simplify the workflow for contributors
   - List issues assigned to the contributor (or issues avalable to claim)
   - User can select an issue to work on
-    - Automatically creates branches and loads the data
+    - Automatically creates fork/branch and loads the data
     - Allows user to save work in progress to pull request
     - User can mark a contribution as ready for review
 - MorphoDepot can be used on a local machine or a Jetstream2 virtual desktop
