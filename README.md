@@ -22,7 +22,7 @@ _class:
 GitHub for Segmentation Projects
 (In alpha development as of October 2024)
 
-https://pieper.github.io/MorphoDepotDocs/ (for Slide presentation)
+https://MorphoCloud.github.io/MorphoDepotDocs/ (for Slide presentation)
 
 ## Quick Links
 
