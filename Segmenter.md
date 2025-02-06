@@ -31,15 +31,11 @@ Press Enter to open github.com in your browser...
 * Run `gh status` on the command line to confirm it is working
 
 ## Install 3D Slicer
-* If needed, get version 5.6.2 or later from [https://download.slicer.org](https://download.slicer.org)
+* If needed, get version 5.8.0 or later from [https://download.slicer.org](https://download.slicer.org). This step is not necessary on MorphoCloud, as instances come with Slicer preloaded. 
 
 ## Installation of MorphoDepot
-* During development the MorphoDepot code is available via a github repository (eventually it will be in SlicerMorph or its own extension)
-* Clone [this repository](https://github.com/pieper/SlicerMorphoDepot) to your computer (use the green `Code` button.  You can use this command in a terminal window to install it: `gh repo clone pieper/SlicerMorphoDepot`
-* Start 3D Slicer
-* Drag the cloned folder and drop it on 3D Slicer
-* Accept the dialog to load the module
-* You can find the MorphoDepot module in the SlicerMorph category or by using the Find Module dialog (Control-F, or Command-F on Mac)
+* Install the MorphoDepot extension via the Extension Manager of Slicer. 
+* Once installed, you can find the MorphoDepot module in the SlicerMorph category or by using the Find Module dialog (Control-F, or Command-F on Mac)
 
 ## Accepting issues
 * The repository owner will email you with links to issues for you.  Follow those links to github and comment on the issue to indicate interest so the repository owner can assign the issue to you.
