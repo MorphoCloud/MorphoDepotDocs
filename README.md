@@ -29,7 +29,7 @@ https://MorphoCloud.github.io/MorphoDepotDocs/ (for Slide presentation)
 * [Instructions for PIs](https://github.com/pieper/MorphoDepotDocs/blob/main/PI.md)
 * [Instructions for Segmenters](https://github.com/pieper/MorphoDepotDocs/blob/main/Segmenter.md)
 
-* Souce repo: [https://github.com/pieper/SlicerMorphoDepot](https://github.com/pieper/SlicerMorphoDepot)
+* Souce repo: [https://github.com/MorphoCloud/SlicerMorphoDepot](https://github.com/MorphoCloud/SlicerMorphoDepot)
 
 ## Big Picture Goals
 
